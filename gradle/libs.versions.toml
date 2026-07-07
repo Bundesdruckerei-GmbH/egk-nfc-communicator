@@ -1,0 +1,20 @@
+[versions]
+agp = "9.2.1"
+androidx-core = "1.19.0"
+bouncyCastleAsn1 = "1.84"
+jk1LicenseReport = "3.1.4"
+kotlin = "2.4.0"
+kotlinx-serialization = "1.11.0"
+versionCatalogUpdate = "1.1.0"
+
+[libraries]
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-core" }
+bouncycastle-asn1 = { module = "org.bouncycastle:bcprov-jdk18on", version.ref = "bouncyCastleAsn1" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
+kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm", version.ref = "kotlinx-serialization" }
+
+[plugins]
+android-library = { id = "com.android.library", version.ref = "agp" }
+com-github-jk1-license-report = { id = "com.github.jk1.dependency-license-report", version.ref = "jk1LicenseReport" }
+versionCatalogUpdate = { id = "nl.littlerobots.version-catalog-update", version.ref = "versionCatalogUpdate" }

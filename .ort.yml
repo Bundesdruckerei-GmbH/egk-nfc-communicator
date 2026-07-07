@@ -1,0 +1,19 @@
+includes:
+  scopes:
+    - pattern: "releaseCompileClasspath|releaseRuntimeClasspath|debugCompileClasspath|debugRuntimeClasspath"
+      reason: "SOURCE_OF"
+      comment: "Source code of delivered packages."
+
+excludes:
+  scopes:
+    # Exclude of build/plugin scopes
+    - pattern: ".*(plugin|Plugin|jacoco|Jacoco|lint|Lint|AnnotationProcessor|BuildTools).*"
+      reason: "BUILD_DEPENDENCY_OF"
+      comment: "Gradle plugins and buildscript dependencies (e.g. Android Gradle Plugin) are not part of the shipped product."
+    - pattern: "kotlinCompilerClasspath|kotlinAbiValidationCompatClasspath|kotlin-extension"
+      reason: "BUILD_DEPENDENCY_OF"
+      comment: "Kotlin compiler, this is not part of the shipped product."
+    # Test excludes
+    - pattern: ".*(test|Test).*"
+      reason: "TEST_DEPENDENCY_OF"
+      comment: "Test dependencies."
