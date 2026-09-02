@@ -7,6 +7,10 @@ code originally stems from the [Gematik E-Rezept-App](https://github.com/gematik
 Relevant sections for communication with eGKs have been extracted and very slightly adjusted, so
 that they can be used as an SDK/library to abstract away low-level communication with eGKs.
 
+#### Were was the original code changed?
+- the original code was re-packaged using this repo
+- a new hashing function was added by adding a new file "SHA256.kt" and integrating it in "SignChallengeExchange.kt"
+- some @Requirement(...) annotations have been removed
 ---
 
 ## Building the SDK
